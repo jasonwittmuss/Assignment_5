@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Functional {
-	public static void main(String[] args) {
+	public Functional() {
 		System.out.println(rightDigit((new ArrayList<>(Arrays.asList(1, 22, 93)))));
 		System.out.println(rightDigit((new ArrayList<>(Arrays.asList(16, 8, 886, 8, 1)))));
 		System.out.println(rightDigit((new ArrayList<>(Arrays.asList(10, 0)))));

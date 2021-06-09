@@ -1,14 +1,17 @@
 package com.ss.jb.five.Assignment_5_2;
 
+
 interface PerformOperation {
 	boolean check(int a);
 }
 
 public class Assignment_5_2_1 {
-	public static void main(String[] args) {
-		if (args.length == 0) {
+	public Assignment_5_2_1(String[] args) {
+		if (args == null || args.length == 0) {
 			return;
 		}
+		
+		Lambdas lamb = new Lambdas();
 
 		int cases = Integer.parseInt(args[0]);
 		PerformOperation p;
@@ -40,6 +43,8 @@ public class Assignment_5_2_1 {
 						System.out.println("NOT PALINDROME");
 					}
 					break;
+				default:
+					System.out.println("Incorrect argument");
 				}
 			}
 		} else {

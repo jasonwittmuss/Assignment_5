@@ -17,9 +17,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class LambdasDate {
-	public static void main(String[] args) {
+	public LambdasDate() {
 		// Lambdas
-		String[] array = { "test", "a", "tomorrow", "also" };
+		String[] array = { "test", "a", "tomorrow", "also", "be" };
 		System.out.println(Arrays.toString(array));
 
 		// Length
@@ -43,6 +43,9 @@ public class LambdasDate {
 		});
 		System.out.println(Arrays.toString(array));
 
+		// Re-scramble
+		Arrays.sort(array, (x, y) -> x.charAt(0) - y.charAt(0));
+		
 		// Static helper
 		Arrays.sort(array, (x, y) -> LambdasDate.eSort(x, y));
 		System.out.println(Arrays.toString(array));
@@ -84,6 +87,7 @@ public class LambdasDate {
 		// 7. Write an example that tests whether a given date occurs on Friday the
 		// 13th.
 		fridayTheThirteenth(2020, 11, 13);
+		fridayTheThirteenth(2021, 6, 4);
 		fridayTheThirteenth(2021, 6, 7);
 	}
 
